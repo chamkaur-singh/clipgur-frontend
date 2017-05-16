@@ -1,0 +1,42 @@
+<section>
+	<div class="container">
+	<div id="inputContainer" layout="column" layout-padding ng-cloak>
+	    <form name="form" ng-submit="handleSubmit()">
+		  <md-content class="md-no-momentum">
+		    <md-input-container class="md-block">
+		      <!-- Use floating label instead of placeholder -->
+		      <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+		      <input ng-model="user.name" type="text" placeholder="Name (required)" ng-required="true" >
+		    </md-input-container>
+
+		    <md-input-container class="md-block">
+		      <!-- Use floating placeholder instead of label -->
+		      <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+		      <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+		    </md-input-container>
+
+		    <md-input-container class="md-block">
+		      <!-- Use floating placeholder instead of label -->
+		      <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="password"></md-icon>
+		      <input ng-model="user.password" type="password" placeholder="password (required)" ng-required="true">
+		    </md-input-container>
+
+		    <md-input-container class="md-icon-float md-icon-right md-block">
+			      <div>
+			        <md-button type="submit">Submit</md-button>
+			      </div>
+		    </md-input-container>
+
+		  </md-content>
+		  <div ng-if="success" class="alert alert-success">
+			  <strong>Success!</strong> {{success}}
+			  </div>
+			</div>
+
+		  <div ng-if="error" class="alert alert-danger">
+		  <strong>Danger!</strong> {{error}}
+		  </div>
+		  </form>
+    </div>
+</div>
+</section>

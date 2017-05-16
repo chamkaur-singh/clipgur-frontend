@@ -1,0 +1,106 @@
+<section>
+	<div class="container">
+		<div class="inputContainer welcome">
+			<h2> Welcome to<span>C</span>lipgur!</h2>
+			<p>Create clips from your favorite YouTube videos.</p>
+		</div>
+
+	<div id="inputContainer" class="inputDemo">
+        <md-content layout-padding>
+            <div class="mdl-cell--hide-phone mdl-cell--12-col mdl-grid">
+               <div class="mdl-cell--9-col mdl-cell">
+					<form name="projectForm" class="ng-pristine ng-invalid ng-invalid-required" enctype="multipart/form-data">
+					    <div class="mdl-cell--5-col mdl-cell left-input">
+
+					    <input  type="file" id="video" name="video" ng-files="getTheFiles($files)" />
+         				<button ng-click="uploadFiles()">upload vide</button>
+<!-- 						    <span class="left-txt"">
+						    <input type="file" file-model = "video" value="Upload from your Local Machine" class="choose-file" id="choosefile">
+						    <a href="javascript:void(0)" ng-click="openfile()" class="select-file">Choose file</a>
+						    </span> -->
+					    </div>
+<!-- 						<span class="text-size">OR</span>
+						<md-input-container class="md-block mdl-cell--6-col mdl-cell md-icon-float ng-animate md-input-invalid right-input" data-ng-animate="2">
+							<label ng-click="delegateClick()">Enter YouTube Video URL</label>
+							<input required="" name="userName" ng-model="project.userName" class="ng-pristine md-input ng-empty ng-invalid ng-invalid-required ng-touched" aria-label="Enter YouTube Video URL" id="input_0" aria-required="true" aria-invalid="true">
+							<div class="md-errors-spacer"></div>
+						</md-input-container> -->				                 
+					</form>
+				</div>
+                <div class="mdl-cell--3-col mdl-cell posr">
+                    <button class="mdl-button yt-btn-create mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  data-upgraded=",MaterialButton,MaterialRipple">Create Clip<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+                </div>
+            </div>
+        </md-content>
+		<div class="mdl-grid">
+	 	<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+	        <div class="social-icon" style="">
+	            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" data-upgraded=",MaterialButton">1</button>
+	            <span class="icon">Fast</span>
+	            <img src="/assets/images/rocket.png">
+	        </div>
+	        <p class="creats">3 hour Youtube Video ? No problem. <span>C</span>lipgur Creates clips in seconds.</p>
+	    </div>
+		<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+		    <div class="social-icon">
+		        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" data-upgraded=",MaterialButton">2</button>
+		        <span class="icon">Simple</span>
+		        <img src="/assets/images/simple.png">
+		    </div>
+		    <p class="creats">Paste your Youtube Video Link, select the start and end times, and enjoy your clip!</p>
+		</div>
+	    <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+	        <div class="social-icon">
+	            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"data-upgraded=",MaterialButton">3</button>
+	            <span class="icon">Social</span>
+	            <img src="/assets/images/globe_icon.jpg">
+	        </div>
+	        <p class="creats"> Share your clip directly From <span>C</span>lipgur to Reddit, Facebook, Vine, and more.</p>
+	    </div>
+	    </div>
+
+
+
+        <md-content layout-padding>
+            <div class="mdl-cell--hide-phone mdl-cell--12-col mdl-grid">
+
+		        <div id="playerWrapper"></div>
+
+		       <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col" style="color:rgb(255,64,129);">
+                                    Start Time <br>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <input class="mdl-textfield__input" type="text" id="startValue" name="starttime" placeholder="00:00">
+                                        <label class="mdl-textfield__label" for="startValue"></label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col" style="color:rgb(255,64,129);">
+                                    End Time <br>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <input class="mdl-textfield__input" type="text" id="endValue" name="endtime" placeholder="02:14">
+                                        <label class="mdl-textfield__label" for="endValue"></label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col">
+                                    Current Time <br>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <input class="mdl-textfield__input" type="text" id="currentTimePlay" readonly="">
+                                        <label class="mdl-textfield__label" for="sample1"></label>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col">
+                                    Interval <br>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <input class="mdl-textfield__input" type="text" id="cropSize" name="cropsize" readonly="">
+                                        <label class="mdl-textfield__label" for="sample1"></label>
+                                    </div>
+                                </div>
+                    </div>
+
+
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="padding:0% 46.5%;" data-upgraded=",MaterialButton,MaterialRipple">Create Clip<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+            </div>
+        </md-content>
+    </div>
+</div>
+</section>

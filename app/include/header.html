@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="#/"><span>C</span>lipgur</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right header-right" ng-hide="$root.globals.currentUser">
+            <a href="#/signup" class="btn btn-success">Sign Up</a>
+             <a href="#/signin" class="btn btn-success">Sign In</a>
+          </form>
+          <form class="navbar-form navbar-right header-right" ng-show="$root.globals.currentUser">
+            <a href="#/signin" class="btn btn-success">Logout</a>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+ 
